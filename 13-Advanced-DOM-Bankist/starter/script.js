@@ -32,3 +32,21 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+//TODO: Selecting elements
+
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+document.querySelector('.header');
+const allSections = document.querySelectorAll('.section');
+console.log(allSections); // Returns a NodeList, which doesn't update automatically
+
+document.getElementById('section-1');
+
+const allButtons = document.getElementsByTagName('button'); // Returns a HTMLCollections, which updates automatically if any html document gets deleted
+console.log(allButtons);
+
+const allButtonWithClassName = document.getElementsByClassName('btn');
+console.log(allButtonWithClassName);
