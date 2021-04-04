@@ -58,12 +58,12 @@ message.classList.add('cookie-message');
 message.innerHTML =
   'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
 
-header.prepend(message);
+// header.prepend(message);
+
 // header.append(message);
 // header.append(message.cloneNode(true));
-
 // header.before(message);
-// header.after(message);
+header.after(message);
 
 // Delete Elements
 document
@@ -71,3 +71,16 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
+
+// Styles Manipulation
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
